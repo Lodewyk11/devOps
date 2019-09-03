@@ -10,7 +10,7 @@ pipeline {
             steps {
                 script {
                     print("Setting variable")
-                    variable = parameters.Choice
+                    variable = params.Choice
                 }   
             }
         }
