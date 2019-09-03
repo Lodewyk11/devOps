@@ -23,16 +23,15 @@ pipeline {
                             print("1")
                             break;
                         case "two":
-                            print("1")
+                            print("2")
                             break;
                         case "three":
-                            print("1")
+                            print("3")
                             break;
                         default:
                             print("I got nuffin...")
                             break;        
                     }
-                    print("Getting variable: " + variable)
                 }   
             }
         }
