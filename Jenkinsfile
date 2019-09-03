@@ -2,7 +2,7 @@ variable = null
 pipeline {
     agent any
     parameters {
-        choice(name: "Choice", choices: ["one", "two", "three"])
+        choice(name: "Choice", choices: ["one", "two", "three"], description: 'Pick something')
     }
 
     stages {
