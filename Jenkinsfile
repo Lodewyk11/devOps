@@ -1,22 +1,42 @@
 variable = null
 pipeline {
     agent any
+    parameters {
+        choice(name: "Choice", choices: ["one", "two", "three"])
+    }
+
     stages {
-        stage('Some stage here') {
+        stage("Getting the choice") {
             steps {
                 script {
                     print("Setting variable")
-                    variable = "The variable value"
+                    variable = parameters.Choice
                 }   
             }
         }
 
-        stage('Another stage here') {
+        stage("Another stage here") {
             steps {
                 script {
+                    switch(variable) {
+                        case "one":
+                            print("1")
+                            break;
+                        case "two":
+                            print("1")
+                            break;
+                        case "three":
+                            print("1")
+                            break;
+                        default:
+                            print("I got nuffin...")
+                            break;        
+                    }
                     print("Getting variable: " + variable)
                 }   
             }
         }
+
+
     }
 }
