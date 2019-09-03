@@ -15,7 +15,7 @@ pipeline {
             }
         }
 
-        stage("Another stage here") {
+        stage("Mapping the choice") {
             steps {
                 script {
                     switch(variable) {
